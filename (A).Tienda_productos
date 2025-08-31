@@ -1,0 +1,53 @@
+Algoritmo Tienda_productos
+	// 1 Definir tipo de variables
+	Definir tipo Como Caracter;
+	definir cantidad Como Entero;
+	Definir precio_base, precio_unitario, precio_descuento, descuento Como Real;
+	
+	//tomar datos
+	Escribir "nombre del producto";
+	Leer nombre;
+	
+	Escribir "Que tipo de producto desea comprar (alimentos, vestimenta, electricos): ";
+	Leer  tipo;
+	
+	Escribir "Ingrese la cantidad de unidades: ";
+	Leer cantidad;
+	// 3 validar cantidad
+	si cantidad <= 0 Entonces
+		Escribir "La cantidad debe ser mayor a 1"
+	SiNo
+	FinSi
+	
+	// procesar datos
+	    Segun tipo hacer
+		"alimentos":
+			precio_base <- 10000;
+			precio_unitario <- cantidad * precio_base;
+			descuento <- precio_unitario * 0.10;
+			
+		"vestimenta":
+			precio_base <- 50000;
+			precio_unitario <- cantidad * precio_base;
+			descuento <- precio_unitario * 0.05;
+			
+		"electricos":
+			precio_base <- 1000000;
+			precio_unitario <- cantidad * precio_base;
+			descuento <- 0;
+			
+		De Otro Modo:
+			Escribir "Error producto no valido "
+	FinSegun
+	
+	//
+	precio_descuento <- precio_unitario - descuento;
+	
+	Escribir "nombe del producto: ", nombre ;
+	Escribir "tipo de producto: ", tipo;
+	Escribir "escrib precio del producto sin descuento: " precio_base * cantidad;
+	Escribir "descuento aplicado: " descuento;
+	Escribir "precio del producto con descuento aplicado: " precio_descuento;
+	Escribir "precio total: " precio_descuento;
+	
+FinAlgoritmo

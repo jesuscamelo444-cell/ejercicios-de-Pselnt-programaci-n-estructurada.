@@ -1,0 +1,60 @@
+Algoritmo Asistente_cine
+	// 1. Definir variables
+	Definir edad, grupo Como Entero;
+	Definir ok Como Lógico;
+	ok <- Verdadero;
+	// 2. Tomar datos
+	
+	Escribir "__________ HOLA, SOY MAX __________";
+	Escribir "TU ASISTENTE VIRTUAL TE DARE UN TOP 3 DE PELICULAS DE 2025";
+	Escribir "Ingresa tu edad: ";
+	Leer edad;
+	// Validar edad
+	
+	Si edad<=0 Entonces
+		Escribir "? Error: edad no válida";
+		ok <- Falso
+	FinSi
+	
+	// Asignar grupo según edad
+	Si ok Entonces
+		// grupo
+		Si edad<7 Entonces
+			grupo <- 1;
+		SiNo
+			Si edad>=7 Y edad<=17 Entonces
+				grupo <- 2;
+			SiNo
+				Si edad>=18 Y edad<=30 Entonces
+					grupo <- 3;
+				SiNo
+					grupo <- 4;
+				FinSi
+			FinSi
+		FinSi
+	FinSi
+	
+	// 3. Procesar datos con Segun
+	Según grupo Hacer
+		1:
+			Escribir "TOP 3 MEJORES PELICULAS:";
+			Escribir "1. Lilo & Stitch - Ciencia ficción';
+			Escribir "2. Dog Man - Animación'
+			Escribir "3. Paddington in Peru - Aventura";
+		2:
+			Escribir "TOP 3 MEJORES PELICULAS:";
+			Escribir "1. Mi vida a lo grande - Comedia dramática";
+			Escribir "2. Space Cadet - Comedia"
+			Escribir "3. Dora and the Search for Sol Dorado - Aventura";
+		3:
+			Escribir "TOP 3 MEJORES PELICULAS:";
+			Escribir "1. Avengers - Ciencia ficción";
+			Escribir "2. Matrix - Ciencia ficción";
+			Escribir "3. Jurassic World - Ciencia ficción";
+		4:
+			Escribir "TOP 3 MEJORES PELICULAS:";
+			Escribir "1.Casablanca - Drama romántico";
+			Escribir "2.Forrest Gump - Drama";
+			Escribir "3.Lo que el viento se llevó - Drama histórico";
+	FinSegún
+FinAlgoritmo

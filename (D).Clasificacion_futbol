@@ -1,0 +1,36 @@
+Algoritmo Clasificación_futbol
+	// 1 definir variables
+	Definir equipo1, equipo2 como cadena;
+	Definir puntos1, puntos2 Como Entero;
+	Definir resultado como cadena;
+	
+	puntos1 <- 0;
+	puntos2 <- 0;
+	
+	// 2 tomar datos
+	Escribir "Ingrese el nombre del equipo 1: ";
+	Leer equipo1;
+	Escribir "Ingrese el nombre del equipo 2: ";
+	leer equipo2;
+	
+	Escribir "Escriba el resultado del equipo 1 (ganado; empate, perdido): ";
+	Leer resultado;
+	
+	segun resultado Hacer
+		"ganado":
+			puntos1 <- puntos1 + 3;
+			puntos2 <- puntos2 + 0;
+		"empate" :
+			puntos1 <- puntos1 + 1;
+			puntos2 <- puntos2 + 1;
+		"perdido" :
+			puntos1 <- puntos1 + 0;
+			puntos2 <- puntos2 + 3;
+		De Otro Modo:
+			Escribir "resultado invalido";
+		
+	FinSegun
+	Escribir" __________CLASIFICACIÓN__________";
+	Escribir "Equipo 1: ",puntos1, " puntos";
+	Escribir "Equipo 2: ",puntos2," puntos";
+FinAlgoritmo
